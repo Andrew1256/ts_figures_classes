@@ -5,15 +5,15 @@ export interface Figure {
 }
 
 export class Triangle implements Figure {
-  shape = 'triangle';
+  readonly shape = 'triangle';
 
-  color: 'red' | 'green' | 'blue';
+  readonly color: 'red' | 'green' | 'blue';
 
-  a: number;
+  protected a: number;
 
-  b: number;
+  protected b: number;
 
-  c: number;
+  protected c: number;
 
   constructor(
     color: 'red' | 'green' | 'blue',
@@ -47,11 +47,11 @@ export class Triangle implements Figure {
 }
 
 export class Circle implements Figure {
-  shape = 'circle';
+  readonly shape = 'circle';
 
-  color: 'red' | 'green' | 'blue';
+  readonly color: 'red' | 'green' | 'blue';
 
-  radius: number;
+  protected radius: number;
 
   constructor(color: 'red' | 'green' | 'blue', radius: number) {
     if (radius <= 0) {
@@ -67,13 +67,13 @@ export class Circle implements Figure {
 }
 
 export class Rectangle implements Figure {
-  shape = 'rectangle';
+  readonly shape = 'rectangle';
 
-  color: 'red' | 'green' | 'blue';
+  readonly color: 'red' | 'green' | 'blue';
 
-  width: number;
+  protected width: number;
 
-  height: number;
+  protected height: number;
 
   constructor(color: 'red' | 'green' | 'blue', width: number, height: number) {
     if (width <= 0 || height <= 0) {
